@@ -16,9 +16,9 @@ export class HomePage {
   	 // this.goFish = goFish;
   }
 
-  playPoker(){
+  playPoker(event, card){
   	this.navCtrl.push(FishPage, {
-  		drag: 'ichabod'
+  		drag: card
   	});
   }
 
