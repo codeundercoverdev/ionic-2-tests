@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { NavController, NavParams } from 'ionic-angular';
 // import { HomePage } from '../home/home';
 // import { AboutPage } from '../about/about';
 // import { ContactPage } from '../contact/contact';
@@ -16,7 +16,9 @@ export class FishPage {
   // tab2Root: any = AboutPage;
   // tab3Root: any = ContactPage;
 
-  constructor() {
-
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  	
+  	// console.log("yolo" + param);
   }
+  param = this.navParams.get('drag');
 }

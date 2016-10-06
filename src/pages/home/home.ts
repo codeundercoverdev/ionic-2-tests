@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 import {FishPage} from '../fish';
 
@@ -12,12 +12,14 @@ import {FishPage} from '../fish';
 export class HomePage {
 
   
-  constructor(public navCtrl: NavController, private goFish: FishPage) {
-  	this.goFish = FishPage;
+  constructor(public navCtrl: NavController, public goFish: FishPage, public navParams: NavParams) {
+  	 // this.goFish = goFish;
   }
 
   playPoker(){
-  	this.navCtrl.push(FishPage);
+  	this.navCtrl.push(FishPage, {
+  		drag: 'ichabod'
+  	});
   }
 
 }
