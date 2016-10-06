@@ -16,4 +16,8 @@ export class HomePage {
   	this.goFish = FishPage;
   }
 
+  playPoker(){
+  	this.navCtrl.push(FishPage);
+  }
+
 }
